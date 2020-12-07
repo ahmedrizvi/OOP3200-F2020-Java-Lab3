@@ -1,3 +1,9 @@
+/*
+ * File Name     : OOP3200-F2020-Java-Lab3
+ * Student Names : Ahmed Rizvi[100698429], Jordan Wriker[100445715]
+ * Date          : 2020-12-06
+ */
+
 package ca.durhamcollege;
 
 import java.time.LocalDate;

@@ -1,6 +1,6 @@
 /*
  * File Name     : OOP3200-F2020-Java-Lab3
- * Student Names : Ahmed Rizvi[100698429], Jordan Wriker[]
+ * Student Names : Ahmed Rizvi[100698429], Jordan Wriker[100445715]
  * Date          : 2020-12-06
  */
 package ca.durhamcollege;
@@ -68,5 +68,25 @@ public class Main
         else
             System.out.println("The ticket could not be altered.");
         System.out.println("\n" + testTicket1.toString());
+
+        // Creates three extended work tickets using the three different constructors
+        ExtendedWorkTicket extTicket1 = new ExtendedWorkTicket();
+        ExtendedWorkTicket extTicket2 = new ExtendedWorkTicket(4, "TT03", LocalDate.now(), "extended test 2", false);
+        ExtendedWorkTicket extTicket3 = new ExtendedWorkTicket(testTicket1, false);
+
+        // Displays the three extended work tickets using the toString that was overridden
+        System.out.println("\n" + extTicket1.toString());
+        System.out.println("\n" + extTicket2.toString());
+        System.out.println("\n" + extTicket3.toString());
+
+        // Demos SetWorkTicket and openTicket methods
+        extTicket1.SetWorkTicket(5, "TT05", LocalDate.now(),"extended test 4", true);
+        extTicket3.openTicket();
+        System.out.println("\n" + extTicket1.toString());
+        System.out.println("\n" + extTicket3.toString());
+
+        // Demos close ticket method
+        extTicket1.closeTicket();
+        System.out.println("\n" + extTicket1.toString());
     }
 }
